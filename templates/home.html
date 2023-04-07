@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="col-4 mt-5 shadow-sm ">
+    <h6>Comments</h6>
+    {% for com in com %}
+    <small class="text-muted" >@{{com.author}} | {{com.date}}</small>
+    <p>{{com.body}}</p>  
+    {% endfor %}
+    <form action="" method="post" class="input-group"> {% csrf_token %}
+        <input class="form-control" name="body" type="text" placeholder="Type your comment..." aria-describedby="'button-addon" >
+        <button class="btn btn-outline-success" type="submit" id="button-addon">Send</button>
+    </form>  
+    <hr>
+   
+</div>
+</div>
+{% endblock content %}
