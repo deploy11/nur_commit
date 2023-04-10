@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="col-4 mt-5 shadow-sm ">
+
     <h6>Comments</h6>
     {% for com in com %}
     <small class="text-muted" >@{{com.author}} | {{com.date}}</small>
@@ -13,6 +13,5 @@
     </form>  
     <hr>
    
-</div>
-</div>
+
 {% endblock content %}
